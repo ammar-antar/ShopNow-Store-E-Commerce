@@ -85,6 +85,7 @@ ShopNow is a front-end e-commerce demo that lets visitors explore products, save
 ---
 ## Project Structure
 
+<pre>
 src/
 ├── api/          # Axios instance (base URL, timeout)
 ├── components/   # UI, grouped by domain
@@ -100,3 +101,4 @@ src/
 ├── lib/          # Pure helpers (cart math, formatting, constants)
 ├── pages/        # Route-level components
 └── store/        # Zustand stores (cart, wishlist, auth)
+</pre>
