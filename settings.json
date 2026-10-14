@@ -1,0 +1,7 @@
+{
+  "tailwindCSS.lint.usedBlocklistedClass": "warning",
+  "tailwindCSS.rootFontSize": 16,
+  "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.validate": true
+}

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/inter";
+/* ───────────────────────────────────────────
+   Design Tokens
+   Base palette = Tailwind's Slate scale (matches spec exactly)
+   We only add semantic aliases + brand accent.
+   ─────────────────────────────────────────── */
+@theme {
+  /* Brand accent */
+  --color-brand:        #2563eb;   /* blue-600 */
+  --color-brand-hover:  #1d4ed8;   /* blue-700 */
+
+  /* Semantic states */
+  --color-success:      #16a34a;   /* green-600 */
+  --color-warning:      #f59e0b;   /* amber-500 */
+  --color-deal:         #dc2626;   /* red-600 */
+
+  /* Radius scale from spec */
+  --radius-sm:  0.25rem;   /*  4px */
+  --radius-md:  0.5rem;    /*  8px */
+  --radius-lg:  0.75rem;   /* 12px */
+  --radius-xl:  1rem;      /* 16px */
+  /* Container max width */ 
+    --container-max: 80rem;   /* 1280px */
+  /* Utility bar */
+      --text-utility: 0.6875rem;              /*  11px */
+  --text-utility--line-height: 1rem;      /*  16px */
+}
+
+/* ───────────────────────────────────────────
+   shadcn/ui tokens
+   Map shadcn's component names to our palette
+   so <Button>, <Input> render with correct colors.
+   ─────────────────────────────────────────── */
+:root {
+  --background:              #f8fafc;   /* slate-50  */
+  --foreground:              #0f172a;   /* slate-900 */
+
+  --card:                    #ffffff;
+  --card-foreground:         #0f172a;
+
+  --primary:                 #0f172a;   /* ink slate — main CTA */
+  --primary-foreground:      #ffffff;
+
+  --secondary:               #f1f5f9;   /* slate-100 */
+  --secondary-foreground:    #0f172a;
+
+  --muted:                   #f1f5f9;
+  --muted-foreground:        #475569;   /* slate-600 */
+
+  --accent:                  #f1f5f9;   /* hover surface */
+  --accent-foreground:       #0f172a;
+
+  --destructive:             #dc2626;
+  --destructive-foreground:  #ffffff;
+
+  --border:                  #e2e8f0;   /* slate-200 */
+  --input:                   #e2e8f0;
+  --ring: #0f172a;
+}
+
+@theme inline {
+  --color-background:              var(--background);
+  --color-foreground:              var(--foreground);
+  --color-card:                    var(--card);
+  --color-card-foreground:         var(--card-foreground);
+  --color-primary:                 var(--primary);
+  --color-primary-foreground:      var(--primary-foreground);
+  --color-secondary:               var(--secondary);
+  --color-secondary-foreground:    var(--secondary-foreground);
+  --color-muted:                   var(--muted);
+  --color-muted-foreground:        var(--muted-foreground);
+  --color-accent:                  var(--accent);
+  --color-accent-foreground:       var(--accent-foreground);
+  --color-destructive:             var(--destructive);
+  --color-destructive-foreground:  var(--destructive-foreground);
+  --color-border:                  var(--border);
+  --color-input:                   var(--input);
+  --color-ring:                    var(--ring);
+}
+
+/* ───────────────────────────────────────────
+   Base
+   ─────────────────────────────────────────── */
+@layer base {
+  html {
+    font-family: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
